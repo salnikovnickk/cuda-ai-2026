@@ -28,7 +28,7 @@ std::vector<float> GeluOMP(const std::vector<float>& input) {
 }
 
 #if 0
-std::vector<float> GeluOMPref(const std::vector<float>& input) {
+std::vector<float> GeluRef(const std::vector<float>& input) {
     size_t n = input.size();
     std::vector<float> output(n);
 
@@ -55,7 +55,7 @@ int main() {
     // Warming-up
     auto y = GeluOMP(x);
 
-    std::vector<float> yref = GeluOMPref(x);
+    std::vector<float> yref = GeluRef(x);
     float err = 0.f;
     for (size_t i = 0; i < n; i++) {
         err = std::max(err, std::abs(y[i] - yref[i]));
