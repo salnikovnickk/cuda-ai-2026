@@ -19,8 +19,7 @@ inline double fastTanh(const double x) {
 }
 
 std::vector<float> GeluOMP(const std::vector<float>& input) {
-    std::vector<float> result;
-    result.reserve(input.size());
+    std::vector<float> result(input.size());
 
     constexpr float sqr2_mpi = std::sqrt(2.f/M_PI);
     constexpr size_t BLOCK_SIZE = 8;

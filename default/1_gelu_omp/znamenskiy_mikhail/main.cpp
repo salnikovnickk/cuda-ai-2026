@@ -8,8 +8,7 @@
 
 namespace {
     std::vector<float> GeluOMPRef(const std::vector<float>& input) {
-        std::vector<float> result;
-        result.reserve(input.size());
+        std::vector<float> result(input.size());
         for (size_t index = 0; index < input.size(); ++index) {
             float x = input[index];
             result[index] = 0.5 * x * (1 + std::tanh(std::sqrt(2.f/M_PI)*(x+0.044715f*std::pow(x,3))));
