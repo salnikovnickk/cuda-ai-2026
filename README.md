@@ -420,6 +420,7 @@ One may use numba or C strings to write CUDA kernels.
 |**FAST**|**FAST**|**0.0710**|**-**|
 |default|smirnov_denis|0.2679|1|
 |**REF**|**REF**|**0.5748**|**-**|
+|default|zinoviev_vladimir|TEST FAILED|-|
 
 ## 4_block_gemm_cuda (4096 elements)
 |Group|Name|Result|Rank|
