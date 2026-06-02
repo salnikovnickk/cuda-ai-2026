@@ -9,7 +9,7 @@ sudo apt install nvidia-cuda-toolkit
 ### Build
 
 ```
-nvcc main.cu -o gelu
+nvcc main.cu gelu_cuda.cu -o gelu
 ```
 
 
