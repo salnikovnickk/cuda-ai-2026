@@ -419,13 +419,13 @@ One may use numba or C strings to write CUDA kernels.
 |default|pisarevsky_vadim|0.1653|2|
 |default|lobanova_elizaveta|0.1671|3|
 |default|chervyakov_ivan|0.1709|9|
-|default|zinoviev_vladimir|0.1751|5|
 |default|chekmaryov_petr|0.1765|12|
 |default|smirnov_denis|0.1770|1|
 |**REF**|**REF**|**0.1864**|**-**|
 |default|pinegina_natalia|0.2180|7|
 |default|lukicheva_polina|0.2290|4|
 |default|zemskov_roman|0.3112|10|
+|default|zinoviev_vladimir|TEST FAILED|5|
 
 ## 3_naive_gemm_cuda (4096 elements)
 |Group|Name|Result|Rank|
@@ -435,10 +435,10 @@ One may use numba or C strings to write CUDA kernels.
 |default|smirnov_denis|0.0769|1|
 |default|zemskov_roman|0.1291|5|
 |default|znamenskiy_mikhail|0.1614|6|
-|default|zinoviev_vladimir|0.1660|2|
 |default|chekmaryov_petr|0.1661|3|
 |default|pinegina_natalia|0.1664|7|
 |**REF**|**REF**|**0.5748**|**-**|
+|default|zinoviev_vladimir|BUILD FAILED|2|
 
 ## 4_block_gemm_cuda (4096 elements)
 |Group|Name|Result|Rank|
@@ -475,21 +475,21 @@ One may use numba or C strings to write CUDA kernels.
 ## default
 |Group|Name|Passed|Score|
 |-----|----|------|-----|
-|default|chekmaryov_petr|4/7|222|
+|default|chekmaryov_petr|4/7|224|
 |default|chervyakov_ivan|2/7|104|
 |default|kireev_daniil|0/7|0|
 |default|korobeynikov_aleksey|1/7|40|
 |default|kryukov_dmitry|0/7|0|
 |default|lobanova_elizaveta|4/7|240|
-|default|lukicheva_polina|2/7|95|
+|default|lukicheva_polina|2/7|96|
 |default|novozhilov_mikhail|1/7|45|
 |default|pigasin_dmitry|1/7|46|
-|default|pinegina_natalia|3/7|145|
+|default|pinegina_natalia|3/7|147|
 |default|pisarevsky_vadim|2/7|124|
-|default|smirnov_denis|6/7|365|
+|default|smirnov_denis|6/7|366|
 |default|vikhrev_ivan|2/7|99|
-|default|zemskov_roman|2/7|102|
-|default|zinoviev_vladimir|5/7|292|
+|default|zemskov_roman|2/7|103|
+|default|zinoviev_vladimir|5/7|238|
 |default|znamenskiy_mikhail|4/7|218|
 |default|zvorykin_aleksandr|2/7|109|
 

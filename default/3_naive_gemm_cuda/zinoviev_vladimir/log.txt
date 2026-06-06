@@ -1,0 +1,5 @@
+/home/crazyproger/sandbox/cuda-ai-2026/default/3_naive_gemm_cuda/zinoviev_vladimir/naive_gemm_cuda.cu(63): error: identifier "BLOCK_SIZE" is undefined
+          const uint num_blocks_x = (n / 4 + BLOCK_SIZE * 2 - 1) / (BLOCK_SIZE * 2);
+                                             ^
+
+1 error detected in the compilation of "/home/crazyproger/sandbox/cuda-ai-2026/default/3_naive_gemm_cuda/zinoviev_vladimir/naive_gemm_cuda.cu".
