@@ -69,7 +69,7 @@ std::vector<float> NaiveGemmCUDA(const std::vector<float>& a,
     cudaMemcpy(A, a.data(), bytes, cudaMemcpyHostToDevice);
     cudaMemcpy(B, b.data(), bytes, cudaMemcpyHostToDevice);
 
-    dim3 threads(16, 16);
+    dim3 threads(32, 8);
     dim3 blocks(
         (n + threads.x - 1) / threads.x,
         ((n+3)/4 + threads.y - 1) / threads.y
