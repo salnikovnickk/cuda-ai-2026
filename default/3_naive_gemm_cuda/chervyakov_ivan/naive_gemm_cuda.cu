@@ -24,9 +24,9 @@ __global__ void naiveGemmKernel(const float *a, const float *b, float *c, int n)
 std::vector<float> NaiveGemmCUDA(const std::vector<float>& a,
                                  const std::vector<float>& b,
                                  int n) {
-
-    size_t N = n *n;
-    size_t size = N  * sizeof(float);
+    constexpr int blockSize = 16;
+    size_t N = n * n;
+    size_t size = N * sizeof(float);
     std::vector<float> c(N);
 
     float *dev_a = nullptr;
@@ -51,18 +51,11 @@ std::vector<float> NaiveGemmCUDA(const std::vector<float>& a,
     cudaMemcpyAsync(dev_a, host_a, size, cudaMemcpyHostToDevice, stream);
     cudaMemcpyAsync(dev_b, host_b, size, cudaMemcpyHostToDevice, stream);
 
-    //const int blockSize = 256;
-
-    int blockSize, minGridSize;
-    cudaOccupancyMaxPotentialBlockSize(&minGridSize, &blockSize, (void *)naiveGemmKernel, 0, N);
-
     dim3 threads(blockSize, blockSize);
-    int blocksNum = cuda::ceil_div(n,blockSize);
+    int blocksNum = cuda::ceil_div(n, blockSize);
     dim3 blocks(blocksNum, blocksNum);
 
     naiveGemmKernel<<<blocks, threads, 0, stream>>>(dev_a, dev_b, dev_c, n);
-
-    cudaDeviceSynchronize();
 
     cudaMemcpyAsync(host_c, dev_c, size, cudaMemcpyDeviceToHost, stream);
 
@@ -74,5 +67,4 @@ std::vector<float> NaiveGemmCUDA(const std::vector<float>& a,
     cudaFree(dev_c);
 
     return c;
-    
 }
