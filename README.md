@@ -450,6 +450,7 @@ One may use numba or C strings to write CUDA kernels.
 |Group|Name|Result|Rank|
 |-----|----|------|----|
 |default|pisarevsky_vadim|0.0379|6|
+|default|zemskov_roman|0.0574|8|
 |**FAST**|**FAST**|**0.0695**|**-**|
 |default|zinoviev_vladimir|0.1237|2|
 |default|lobanova_elizaveta|0.1244|3|
@@ -468,6 +469,7 @@ One may use numba or C strings to write CUDA kernels.
 |default|lobanova_elizaveta|0.0375|6|
 |default|znamenskiy_mikhail|0.0379|3|
 |**FAST**|**FAST**|**0.0388**|**-**|
+|default|zemskov_roman|0.0412|7|
 |default|smirnov_denis|0.0438|1|
 |**REF**|**REF**|**0.0467**|**-**|
 |default|pinegina_natalia|0.0469|5|
@@ -480,6 +482,7 @@ One may use numba or C strings to write CUDA kernels.
 |default|smirnov_denis|0.1727|1|
 |**REF**|**REF**|**0.1814**|**-**|
 |default|pinegina_natalia|TEST FAILED|-|
+|default|zemskov_roman|TEST FAILED|-|
 
 ## 7_layernorm_pycuda (8192x16384 elements)
 |Group|Name|Result|Rank|
@@ -491,22 +494,22 @@ One may use numba or C strings to write CUDA kernels.
 ## default
 |Group|Name|Passed|Score|
 |-----|----|------|-----|
-|default|chekmaryov_petr|4/7|217|
+|default|chekmaryov_petr|4/7|216|
 |default|chervyakov_ivan|2/7|102|
 |default|kireev_daniil|0/7|0|
 |default|korobeynikov_aleksey|1/7|40|
 |default|kryukov_dmitry|0/7|0|
-|default|lobanova_elizaveta|5/7|294|
+|default|lobanova_elizaveta|5/7|293|
 |default|lukicheva_polina|2/7|93|
 |default|novozhilov_mikhail|2/7|87|
 |default|pigasin_dmitry|1/7|46|
-|default|pinegina_natalia|5/7|251|
+|default|pinegina_natalia|5/7|249|
 |default|pisarevsky_vadim|5/7|296|
-|default|smirnov_denis|6/7|357|
+|default|smirnov_denis|6/7|355|
 |default|vikhrev_ivan|3/7|149|
-|default|zemskov_roman|2/7|106|
-|default|zinoviev_vladimir|6/7|361|
-|default|znamenskiy_mikhail|5/7|272|
+|default|zemskov_roman|4/7|216|
+|default|zinoviev_vladimir|6/7|360|
+|default|znamenskiy_mikhail|5/7|271|
 |default|zvorykin_aleksandr|2/7|109|
 
 Passed: 0
