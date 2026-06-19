@@ -2,6 +2,38 @@
 
 #include <cuda_runtime.h>
 
+struct Context {
+
+    float* vidA = nullptr;
+    float* vidB = nullptr;
+    float* vidC = nullptr;
+
+    size_t allocated_bytes = 0;
+
+    void EnsureCapacity(size_t bytes) {
+        if (bytes <= allocated_bytes)
+            return;
+
+        if (vidA) cudaFree(vidA);
+        if (vidB) cudaFree(vidB);
+        if (vidC) cudaFree(vidC);
+
+        cudaMalloc(&vidA, bytes);
+        cudaMalloc(&vidB, bytes);
+        cudaMalloc(&vidC, bytes);
+
+        allocated_bytes = bytes;
+    }
+
+    ~Context() {
+        if (vidA) cudaFree(vidA);
+        if (vidB) cudaFree(vidB);
+        if (vidC) cudaFree(vidC);
+    }
+};
+
+static Context ctx;
+
 constexpr int TILE = 16;
 
 __global__ void BlockGemmKernel(const float* A,
@@ -40,31 +72,19 @@ __global__ void BlockGemmKernel(const float* A,
 std::vector<float> BlockGemmCUDA(const std::vector<float>& a,
                                  const std::vector<float>& b,
                                  int n) {
-    std::vector<float> c(n * n);
-
-    float *vidA = nullptr;
-    float *vidB = nullptr;
-    float *vidC = nullptr;
-
     const size_t bytes = static_cast<size_t>(n) * n * sizeof(float);
+    ctx.EnsureCapacity(bytes);
 
-    cudaMalloc(&vidA, bytes);
-    cudaMalloc(&vidB, bytes);
-    cudaMalloc(&vidC, bytes);
-
-    cudaMemcpy(vidA, a.data(), bytes, cudaMemcpyHostToDevice);
-    cudaMemcpy(vidB, b.data(), bytes, cudaMemcpyHostToDevice);
+    cudaMemcpy(ctx.vidA, a.data(), bytes, cudaMemcpyHostToDevice);
+    cudaMemcpy(ctx.vidB, b.data(), bytes, cudaMemcpyHostToDevice);
 
     dim3 block(TILE, TILE);
     dim3 grid(n / TILE, n / TILE);
 
-    BlockGemmKernel<<<grid, block>>>(vidA, vidB, vidC, n);
+    BlockGemmKernel<<<grid, block>>>(ctx.vidA, ctx.vidB, ctx.vidC, n);
 
-    cudaMemcpy(c.data(), vidC, bytes, cudaMemcpyDeviceToHost);
-
-    cudaFree(vidA);
-    cudaFree(vidB);
-    cudaFree(vidC);
+    std::vector<float> c(n * n);
+    cudaMemcpy(c.data(), ctx.vidC, bytes, cudaMemcpyDeviceToHost);
 
     return c;
 }
