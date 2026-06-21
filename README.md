@@ -515,6 +515,7 @@ One may use numba or C strings to write CUDA kernels.
 |default|pigasin_dmitry|0.1850|3|
 |**REF**|**REF**|**0.1930**|**-**|
 |default|smirnov_denis|0.2060|1|
+|default|lobanova_elizaveta|0.2060|4|
 |default|pinegina_natalia|TOO SLOW|-|
 
 # Tasks Done
@@ -528,7 +529,7 @@ One may use numba or C strings to write CUDA kernels.
 |default|kireev_daniil|0/7|0|
 |default|korobeynikov_aleksey|2/7|73|
 |default|kryukov_dmitry|0/7|0|
-|default|lobanova_elizaveta|6/7|348|
+|default|lobanova_elizaveta|**7/7**|**406**|
 |default|lukicheva_polina|2/7|85|
 |default|malinin_nikita|2/7|79|
 |default|novozhilov_mikhail|2/7|82|
@@ -543,9 +544,9 @@ One may use numba or C strings to write CUDA kernels.
 |default|znamenskiy_mikhail|6/7|318|
 |default|zvorykin_aleksandr|2/7|109|
 
-Passed: 3
+Passed: 4
 
-**Total Passed: 3**
+**Total Passed: 4**
 
 ---
 *Maximum Score: 448 (64 per task)*
