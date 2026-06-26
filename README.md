@@ -564,6 +564,7 @@ One may use numba or C strings to write CUDA kernels.
 |-----|----|------|----|
 |default|zinoviev_vladimir|0.1030|2|
 |default|zemskov_roman|0.1780|5|
+|default|kozlov_mikhail|0.1790|13|
 |default|pigasin_dmitry|0.1850|3|
 |default|zlobin_george|0.1850|9|
 |default|chervyakov_ivan|0.1860|8|
@@ -583,37 +584,37 @@ One may use numba or C strings to write CUDA kernels.
 |-----|----|------|-----|
 |default|belov_dmitry|1/7|40|
 |default|bolshakova_viktoriya|5/7|134|
-|default|chekmaryov_petr|**7/7**|**325**|
-|default|chervyakov_ivan|**7/7**|**312**|
-|default|ermilov_dmitry|**7/7**|**314**|
+|default|chekmaryov_petr|**7/7**|**324**|
+|default|chervyakov_ivan|**7/7**|**311**|
+|default|ermilov_dmitry|**7/7**|**313**|
 |default|kireev_daniil|0/7|0|
 |default|korobeynikov_aleksey|4/7|139|
-|default|kozlov_mikhail|6/7|241|
+|default|kozlov_mikhail|**7/7**|**291**|
 |default|kryukov_dmitry|2/7|62|
-|default|lobanova_elizaveta|**7/7**|**396**|
+|default|lobanova_elizaveta|**7/7**|**395**|
 |default|lukicheva_polina|4/7|128|
-|default|malinin_nikita|**7/7**|**277**|
+|default|malinin_nikita|**7/7**|**276**|
 |default|novozhilov_mikhail|4/7|133|
-|default|pigasin_dmitry|**7/7**|**325**|
-|default|pinegina_natalia|**7/7**|**302**|
+|default|pigasin_dmitry|**7/7**|**324**|
+|default|pinegina_natalia|**7/7**|**301**|
 |default|pisarevsky_vadim|6/7|333|
 |default|pushchin_alexey|0/7|0|
 |default|putilin_artyom|3/7|82|
 |default|rodygin_vadim|3/7|114|
 |default|salnikov_nikolay|5/7|170|
-|default|smirnov_denis|**7/7**|**379**|
+|default|smirnov_denis|**7/7**|**378**|
 |default|suchkov_vladislav|3/7|69|
 |default|vikhrev_ivan|5/7|228|
 |default|volkovskiy_pavel|2/7|59|
 |default|zemskov_roman|**7/7**|**354**|
 |default|zinoviev_vladimir|**7/7**|**408**|
-|default|zlobin_george|**7/7**|**276**|
-|default|znamenskiy_mikhail|**7/7**|**341**|
+|default|zlobin_george|**7/7**|**275**|
+|default|znamenskiy_mikhail|**7/7**|**340**|
 |default|zvorykin_aleksandr|5/7|227|
 
-Passed: 12
+Passed: 13
 
-**Total Passed: 12**
+**Total Passed: 13**
 
 ---
 *Maximum Score: 448 (64 per task)*
