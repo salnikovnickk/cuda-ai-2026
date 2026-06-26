@@ -516,6 +516,7 @@ One may use numba or C strings to write CUDA kernels.
 ## 5_gemm_cublas (4096 elements)
 |Group|Name|Result|Rank|
 |-----|----|------|----|
+|default|kozlov_mikhail|0.0318|17|
 |default|ermilov_dmitry|0.0323|10|
 |default|pigasin_dmitry|0.0331|9|
 |default|zinoviev_vladimir|0.0346|2|
@@ -580,34 +581,34 @@ One may use numba or C strings to write CUDA kernels.
 |Group|Name|Passed|Score|
 |-----|----|------|-----|
 |default|belov_dmitry|1/7|40|
-|default|bolshakova_viktoriya|5/7|137|
-|default|chekmaryov_petr|**7/7**|**328**|
-|default|chervyakov_ivan|**7/7**|**316**|
-|default|ermilov_dmitry|**7/7**|**316**|
+|default|bolshakova_viktoriya|5/7|136|
+|default|chekmaryov_petr|**7/7**|**327**|
+|default|chervyakov_ivan|**7/7**|**315**|
+|default|ermilov_dmitry|**7/7**|**315**|
 |default|kireev_daniil|0/7|0|
 |default|korobeynikov_aleksey|4/7|140|
-|default|kozlov_mikhail|4/7|145|
+|default|kozlov_mikhail|5/7|193|
 |default|kryukov_dmitry|2/7|62|
-|default|lobanova_elizaveta|**7/7**|**397**|
+|default|lobanova_elizaveta|**7/7**|**396**|
 |default|lukicheva_polina|4/7|129|
-|default|malinin_nikita|6/7|241|
+|default|malinin_nikita|6/7|240|
 |default|novozhilov_mikhail|4/7|134|
-|default|pigasin_dmitry|**7/7**|**328**|
-|default|pinegina_natalia|**7/7**|**306**|
-|default|pisarevsky_vadim|6/7|335|
+|default|pigasin_dmitry|**7/7**|**327**|
+|default|pinegina_natalia|**7/7**|**305**|
+|default|pisarevsky_vadim|6/7|334|
 |default|pushchin_alexey|0/7|0|
 |default|putilin_artyom|3/7|82|
 |default|rodygin_vadim|3/7|115|
 |default|salnikov_nikolay|4/7|133|
-|default|smirnov_denis|**7/7**|**383**|
+|default|smirnov_denis|**7/7**|**382**|
 |default|suchkov_vladislav|3/7|69|
-|default|vikhrev_ivan|5/7|231|
+|default|vikhrev_ivan|5/7|230|
 |default|volkovskiy_pavel|2/7|59|
-|default|zemskov_roman|**7/7**|**357**|
-|default|zinoviev_vladimir|**7/7**|**410**|
-|default|zlobin_george|**7/7**|**279**|
-|default|znamenskiy_mikhail|**7/7**|**344**|
-|default|zvorykin_aleksandr|5/7|230|
+|default|zemskov_roman|**7/7**|**356**|
+|default|zinoviev_vladimir|**7/7**|**409**|
+|default|zlobin_george|**7/7**|**278**|
+|default|znamenskiy_mikhail|**7/7**|**343**|
+|default|zvorykin_aleksandr|5/7|229|
 
 Passed: 11
 
