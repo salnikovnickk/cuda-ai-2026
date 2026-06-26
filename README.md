@@ -498,6 +498,7 @@ One may use numba or C strings to write CUDA kernels.
 |default|pigasin_dmitry|0.1279|12|
 |default|korobeynikov_aleksey|0.1310|17|
 |default|pinegina_natalia|0.1321|7|
+|default|salnikov_nikolay|0.1325|19|
 |default|chekmaryov_petr|0.1329|4|
 |default|smirnov_denis|0.1336|1|
 |default|lukicheva_polina|0.1345|15|
@@ -532,6 +533,7 @@ One may use numba or C strings to write CUDA kernels.
 |**REF**|**REF**|**0.0467**|**-**|
 |default|pinegina_natalia|0.0469|5|
 |default|zvorykin_aleksandr|0.0469|12|
+|default|salnikov_nikolay|BUILD FAILED|-|
 
 ## 6_softmax_cuda (8192x16384 elements)
 |Group|Name|Result|Rank|
@@ -576,33 +578,33 @@ One may use numba or C strings to write CUDA kernels.
 |Group|Name|Passed|Score|
 |-----|----|------|-----|
 |default|belov_dmitry|1/7|41|
-|default|bolshakova_viktoriya|5/7|140|
-|default|chekmaryov_petr|**7/7**|**330**|
-|default|chervyakov_ivan|**7/7**|**319**|
+|default|bolshakova_viktoriya|5/7|139|
+|default|chekmaryov_petr|**7/7**|**329**|
+|default|chervyakov_ivan|**7/7**|**318**|
 |default|ermilov_dmitry|**7/7**|**317**|
 |default|kireev_daniil|0/7|0|
 |default|korobeynikov_aleksey|4/7|141|
 |default|kozlov_mikhail|3/7|113|
 |default|kryukov_dmitry|2/7|63|
 |default|lobanova_elizaveta|**7/7**|**398**|
-|default|lukicheva_polina|4/7|132|
+|default|lukicheva_polina|4/7|131|
 |default|malinin_nikita|5/7|200|
-|default|novozhilov_mikhail|4/7|137|
+|default|novozhilov_mikhail|4/7|136|
 |default|pigasin_dmitry|**7/7**|**329**|
 |default|pinegina_natalia|**7/7**|**307**|
 |default|pisarevsky_vadim|6/7|335|
 |default|pushchin_alexey|0/7|0|
 |default|putilin_artyom|3/7|83|
-|default|rodygin_vadim|3/7|117|
-|default|salnikov_nikolay|3/7|98|
-|default|smirnov_denis|**7/7**|**386**|
+|default|rodygin_vadim|3/7|116|
+|default|salnikov_nikolay|4/7|134|
+|default|smirnov_denis|**7/7**|**385**|
 |default|suchkov_vladislav|3/7|70|
 |default|vikhrev_ivan|5/7|232|
 |default|volkovskiy_pavel|1/7|21|
 |default|zemskov_roman|**7/7**|**358**|
 |default|zinoviev_vladimir|**7/7**|**411**|
 |default|zlobin_george|**7/7**|**280**|
-|default|znamenskiy_mikhail|**7/7**|**347**|
+|default|znamenskiy_mikhail|**7/7**|**346**|
 |default|zvorykin_aleksandr|5/7|231|
 
 Passed: 11
