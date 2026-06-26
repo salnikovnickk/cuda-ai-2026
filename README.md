@@ -390,6 +390,7 @@ One may use numba or C strings to write CUDA kernels.
 |Group|Name|Result|Rank|
 |-----|----|------|----|
 |default|pisarevsky_vadim|0.0768|1|
+|default|volkovskiy_pavel|0.0791|26|
 |default|lobanova_elizaveta|0.0838|4|
 |**FAST**|**FAST**|**0.0879**|**-**|
 |default|chekmaryov_petr|0.0882|3|
@@ -417,7 +418,6 @@ One may use numba or C strings to write CUDA kernels.
 |default|korobeynikov_aleksey|0.3856|13|
 |**REF**|**REF**|**0.4536**|**-**|
 |default|kireev_daniil|TEST FAILED|-|
-|default|volkovskiy_pavel|RUN FAILED|-|
 |default|pushchin_alexey|TEST FAILED|-|
 
 ## 2_gelu_cuda (134217728 elements)
@@ -571,41 +571,42 @@ One may use numba or C strings to write CUDA kernels.
 |default|lobanova_elizaveta|0.2060|4|
 |default|chekmaryov_petr|0.2070|11|
 |default|znamenskiy_mikhail|0.2180|7|
+|default|malinin_nikita|0.2580|12|
 |default|bolshakova_viktoriya|TEST FAILED|-|
 
 # Tasks Done
 ## default
 |Group|Name|Passed|Score|
 |-----|----|------|-----|
-|default|belov_dmitry|1/7|41|
-|default|bolshakova_viktoriya|5/7|139|
-|default|chekmaryov_petr|**7/7**|**329**|
-|default|chervyakov_ivan|**7/7**|**318**|
-|default|ermilov_dmitry|**7/7**|**317**|
+|default|belov_dmitry|1/7|40|
+|default|bolshakova_viktoriya|5/7|138|
+|default|chekmaryov_petr|**7/7**|**328**|
+|default|chervyakov_ivan|**7/7**|**317**|
+|default|ermilov_dmitry|**7/7**|**316**|
 |default|kireev_daniil|0/7|0|
-|default|korobeynikov_aleksey|4/7|141|
-|default|kozlov_mikhail|3/7|113|
-|default|kryukov_dmitry|2/7|63|
-|default|lobanova_elizaveta|**7/7**|**398**|
-|default|lukicheva_polina|4/7|131|
-|default|malinin_nikita|5/7|200|
-|default|novozhilov_mikhail|4/7|136|
-|default|pigasin_dmitry|**7/7**|**329**|
-|default|pinegina_natalia|**7/7**|**307**|
+|default|korobeynikov_aleksey|4/7|140|
+|default|kozlov_mikhail|3/7|112|
+|default|kryukov_dmitry|2/7|62|
+|default|lobanova_elizaveta|**7/7**|**397**|
+|default|lukicheva_polina|4/7|130|
+|default|malinin_nikita|6/7|241|
+|default|novozhilov_mikhail|4/7|135|
+|default|pigasin_dmitry|**7/7**|**328**|
+|default|pinegina_natalia|**7/7**|**306**|
 |default|pisarevsky_vadim|6/7|335|
 |default|pushchin_alexey|0/7|0|
-|default|putilin_artyom|3/7|83|
+|default|putilin_artyom|3/7|82|
 |default|rodygin_vadim|3/7|116|
-|default|salnikov_nikolay|4/7|134|
-|default|smirnov_denis|**7/7**|**385**|
-|default|suchkov_vladislav|3/7|70|
-|default|vikhrev_ivan|5/7|232|
-|default|volkovskiy_pavel|1/7|21|
-|default|zemskov_roman|**7/7**|**358**|
-|default|zinoviev_vladimir|**7/7**|**411**|
-|default|zlobin_george|**7/7**|**280**|
-|default|znamenskiy_mikhail|**7/7**|**346**|
-|default|zvorykin_aleksandr|5/7|231|
+|default|salnikov_nikolay|4/7|133|
+|default|smirnov_denis|**7/7**|**384**|
+|default|suchkov_vladislav|3/7|69|
+|default|vikhrev_ivan|5/7|231|
+|default|volkovskiy_pavel|2/7|59|
+|default|zemskov_roman|**7/7**|**357**|
+|default|zinoviev_vladimir|**7/7**|**410**|
+|default|zlobin_george|**7/7**|**279**|
+|default|znamenskiy_mikhail|**7/7**|**345**|
+|default|zvorykin_aleksandr|5/7|230|
 
 Passed: 11
 
