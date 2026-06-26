@@ -4,28 +4,31 @@
 #define BLOCK_SIZE 16
 #define BLOCK_SIZE_DOUBLE BLOCK_SIZE * BLOCK_SIZE
 
-__global__ void BlockGemmCUDAImpl(const float *a, const float *b, float *c, int n) {
-    __shared__ int blockA[BLOCK_SIZE_DOUBLE];
-    __shared__ int blockB[BLOCK_SIZE_DOUBLE];
+__global__ void BlockGemmCUDAImpl(float *a, float *b, float *c, int n)
+{
+    int t_x = threadIdx.y;
+    int t_y = threadIdx.x;
+    int row = threadIdx.y + blockIdx.y * blockDim.y;
+    int col = threadIdx.x + blockIdx.x * blockDim.x;
 
-    int localRow = threadIdx.y;
-    int localCol = threadIdx.x;
-    int globalRow = localRow + blockIdx.y * blockDim.y;
-    int globalCol = localCol + blockIdx.x * blockDim.x;
+    __shared__ float blockA[BLOCK_SIZE_DOUBLE];
+    __shared__ float blockB[BLOCK_SIZE_DOUBLE];
 
-    float sum = 0.0f;
+    float sum = 0;
 
-    for (int block = 0; block < gridDim.x; ++block) {
-        blockA[localRow * BLOCK_SIZE + localCol] = a[globalRow * n + block * BLOCK_SIZE + localCol];
-        blockB[localRow * BLOCK_SIZE + localCol] = b[(block * BLOCK_SIZE + localRow) * n + globalCol];
+    for (int i = 0; i < gridDim.x; ++i)
+    {
+        blockA[t_x * BLOCK_SIZE + t_y] = a[row * n + i * BLOCK_SIZE + t_y];
+        blockB[t_x * BLOCK_SIZE + t_y] = b[(i * BLOCK_SIZE + t_x) * n + col];
         __syncthreads();
 
-        for (int k = 0; k < BLOCK_SIZE; ++k) {
-            sum += blockA[localRow * BLOCK_SIZE + k] * blockB[k * BLOCK_SIZE + localCol];
+        for (int k = 0; k < BLOCK_SIZE; ++k)
+        {
+            sum += blockA[t_x * BLOCK_SIZE + k] * blockB[k * BLOCK_SIZE + t_y];
         }
         __syncthreads();
     }
-    c[globalRow * n + globalCol] = sum;
+    c[row * n + col] = sum;
 }
 
 std::vector<float> BlockGemmCUDA(const std::vector<float>& a,
@@ -46,9 +49,8 @@ std::vector<float> BlockGemmCUDA(const std::vector<float>& a,
     cudaMemcpy(gpuBufferB, b.data(), bytesSize, cudaMemcpyHostToDevice);
     cudaMemset(gpuBufferC, 0, bytesSize);
 
-    int blocks = n / BLOCK_SIZE;
     dim3 threadsDim(BLOCK_SIZE, BLOCK_SIZE);
-    dim3 blocksDim(blocks, blocks);
+    dim3 blocksDim(n / BLOCK_SIZE, n / BLOCK_SIZE);
 
     BlockGemmCUDAImpl<<<blocksDim, threadsDim>>>(gpuBufferA, gpuBufferB, gpuBufferC, n);
 
